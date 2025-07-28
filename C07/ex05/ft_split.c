@@ -6,7 +6,7 @@
 /*   By: eassim <eassim@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/25 10:46:11 by eassim            #+#    #+#             */
-/*   Updated: 2025/07/28 16:58:28 by eassim           ###   ########.fr       */
+/*   Updated: 2025/07/28 21:14:01 by eassim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,9 @@ char	**ft_split(char *str, char *charset)
 	int		wc;
 	char	**res;
 
-	wc = ft_wordcount(str, charset);
-	if (wc == 0)
+	if (!str || !charset)
 		return (NULL);
+	wc = ft_wordcount(str, charset);
 	res = (char **)malloc(8 * (wc + 1));
 	idx = 0;
 	while (idx < wc)

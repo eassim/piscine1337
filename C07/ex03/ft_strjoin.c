@@ -6,7 +6,7 @@
 /*   By: eassim <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 18:29:21 by eassim            #+#    #+#             */
-/*   Updated: 2025/07/28 16:58:16 by eassim           ###   ########.fr       */
+/*   Updated: 2025/07/28 21:03:30 by eassim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_strcat(char *dest, char *src)
 	{
 		dest[len + i] = src[i];
 	}
+	dest[len + i] = '\0';
 	return (dest);
 }
 
@@ -60,6 +61,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	if (size == 0)
 	{
 		empty = malloc(1);
+		empty[0] = '\0';
 		return (empty);
 	}
 	total_length = calc_length(size, strs, sep);
