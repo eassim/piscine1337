@@ -6,11 +6,12 @@
 /*   By: eassim <eassim@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 15:29:19 by eassim            #+#    #+#             */
-/*   Updated: 2025/07/28 16:11:24 by eassim           ###   ########.fr       */
+/*   Updated: 2025/07/28 20:39:48 by eassim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "ft_stock_str.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {

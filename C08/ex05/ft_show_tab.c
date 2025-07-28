@@ -6,11 +6,12 @@
 /*   By: eassim <eassim@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 16:12:09 by eassim            #+#    #+#             */
-/*   Updated: 2025/07/28 16:23:03 by eassim           ###   ########.fr       */
+/*   Updated: 2025/07/28 20:43:39 by eassim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_stock_str.h"
 
 int	ft_strlen(char *str)
 {
