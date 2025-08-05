@@ -6,7 +6,7 @@
 /*   By: eassim <eassim@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 15:29:19 by eassim            #+#    #+#             */
-/*   Updated: 2025/07/28 20:39:48 by eassim           ###   ########.fr       */
+/*   Updated: 2025/08/03 04:10:14 by eassim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ struct	s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	int			i;
 	t_stock_str	*res;
+	t_stock_str	elem;
+	char		*dup;
 
 	res = malloc(sizeof(t_stock_str) * (ac + 1));
 	if (!res)
@@ -59,13 +61,18 @@ struct	s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	i = 0;
 	while (i < ac)
 	{
-		res[i].size = sizeof(char) * ft_strlen(av[i]) + 1;
-		res[i].str = av[i];
-		res[i].copy = ft_strdup(av[i]);
-		if (!res[i].str)
+		dup = ft_strdup(av[i]);
+		if (!dup)
+		{
+			free(dup);
 			return (NULL);
+		}
+		elem.size = ft_strlen(av[i]);
+		elem.str = av[i];
+		elem.copy = dup;
+		res[i] = elem;
 		i++;
 	}
-	res[i] = (t_stock_str){0};
+	res[i].str = 0;
 	return (res);
 }
