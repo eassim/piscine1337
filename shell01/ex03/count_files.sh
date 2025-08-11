@@ -1,3 +1,2 @@
 #!/bin/sh
-find . | wc -l | tr -d ' ' 
-
+find . \( -type f -o -type d \) | wc -l
