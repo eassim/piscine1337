@@ -46,7 +46,6 @@ This repository contains the solutions I submitted for **Shell01** during the Pi
 - [tr – man page](https://man7.org/linux/man-pages/man1/tr.1.html)  
 - [sort – man page](https://man7.org/linux/man-pages/man1/sort.1.html)  
 - [head – man page](https://man7.org/linux/man-pages/man1/head.1.html)  
-- [tail – man page](https://man7.org/linux/man-pages/man1/tail.1.html)  
 
 ---
 
@@ -54,5 +53,5 @@ This repository contains the solutions I submitted for **Shell01** during the Pi
 - **Precision matters** — filenames, permissions, and output format must match exactly for Moulinette to pass.
 - For exercises involving **environment variables** (`FT_USER`, `FT_LINE1`, `FT_LINE2`, `FT_NBR1`, `FT_NBR2`), test with:
   ```sh
-  export FT_USER=nours
+  export FT_USER=come_to_bocal
   ./print_groups.sh
